@@ -3,7 +3,7 @@ source("get-data.R")
 downloadData()
 data <- prepareData(readData(sourceFileName()))
 
-png("plot4.png")
+png("plot4.png", width=480, height=480)
 
 par(mfrow=c(2,2))
 
@@ -45,7 +45,8 @@ legend("topright",
        lty=1,
        legend=c("Sub_metering_1",
            "Sub_metering_2",
-           "Sub_metering_3"))
+           "Sub_metering_3"),
+       bty='n')
 
 plot(data$DateTime,
      data$Global_reactive_power,

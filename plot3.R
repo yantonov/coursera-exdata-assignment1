@@ -3,7 +3,7 @@ source("get-data.R")
 downloadData()
 data <- prepareData(readData(sourceFileName()))
 
-png("plot3.png")
+png("plot3.png", width=480, height=480)
 
 plot(data$DateTime,
      data$Sub_metering_1,
